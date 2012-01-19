@@ -1,0 +1,20 @@
+tinyMCE.addI18n('pt.emotions_dlg',{
+title:"Inserir emotion",
+desc:"Emotions",
+cool:"Legal",
+cry:"Chorar",
+embarassed:"Envergonhado",
+foot_in_mouth:"Dizer besteira",
+frown:"Carrancudo",
+innocent:"Inocente",
+kiss:"Beijo",
+laughing:"Risada",
+money_mouth:"Rico",
+sealed:"Guardar segredo",
+smile:"Sorrir",
+surprised:"Surpreso",
+tongue_out:"Língua de fora",
+undecided:"Indeciso",
+wink:"Piscar",
+yell:"Gritar"
+});

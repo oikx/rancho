@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>JAnt LightGallery</name>
+	<author>JoomAnt Team</author>
+	<creationDate>2011/09/24</creationDate>
+	<copyright>Copyright (C) 2011 - 2012 JoomAnt. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joomant@gmail.com</authorEmail>
+	<authorUrl>www.joomant.org</authorUrl>
+	<version>1.0.0</version>
+	<description>DESCJANTLIGHTGALLERY</description>
+	<files>
+		<filename module="mod_jant_lightgallery">mod_jant_lightgallery.php</filename>
+		<filename module="mod_jant_lightgallery">helper.php</filename>
+		<filename module="mod_jant_lightgallery">thumbnail.png</filename>
+		<filename module="mod_jant_lightgallery">index.html</filename>
+		<filename module="mod_jant_lightgallery">gpl-2.0.txt</filename>
+		<folder>assets</folder>
+		<folder>classes</folder>
+		<folder>fields</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jant_lightgallery.ini</language>
+		<language tag="en-GB">en-GB.mod_jant_lightgallery.sys.ini</language>
+	</languages>
+	<config>	
+		<fields name="params" addfieldpath="/modules/mod_jant_lightgallery/fields">
+			<fieldset name="module_parameters" label="JANT_MODULE_PARAMETERS">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="@sp1" type="spacer" default="" label="=== REQUIRED PARAMETERS ===" description="" />	
+				<field name="folder_path" type="jantdropboximagefolder" default="" label="JANT_FOLDER" description="JANT_FOLDER_DESC" />
+				<field name="@sp2" type="spacer" default="" label="=== APPEARANCE PARAMETERS ===" description="" />
+				<field name="width" type="text" default="100%" label="JANT_OVERALL_WIDTH" description="JANT_OVERALL_WIDTH_DESC" />
+				<field name="height" type="text" default="450" label="JANT_OVERALL_HEIGHT" description="JANT_OVERALL_HEIGHT_DESC" />
+				<field name="gallery_border" type="text" default="2" label="JANT_GALLERY_BORDER" description="JANT_GALLERY_BORDER_DESC" />	
+				<field type="jantcolorpicker" name="gallery_border_color" default="#000000" label="JANT_GALLERY_BORDER_COLOR" description="JANT_GALLERY_BORDER_COLOR_DESC"  />
+				<field name="@sp3" type="spacer" default="" label="=== SLIDESHOW PARAMETERS ===" description="" />
+				<field name="auto_play" type="radio" default="1" label="JANT_AUTO_PLAY" description="JANT_AUTO_PLAY_DESC">	
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="sliding_time" type="text" default="5" label="JANT_SLIDING_TIME" description="JANT_SLIDING_TIME_DESC" />		
+				<field name="@sp4" type="spacer" default="" label="=== THUMB PANEL PARAMETERS ===" description="" />
+				<field name="show_thumb_panel" type="radio" default="1" label="JANT_SHOW_THUMB_PANEL" description="JANT_SHOW_THUMB_PANEL_DESC">	
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="jantcolorpicker" name="thumb_panel_background" default="#000000" label="JANT_THUMB_PANEL_BACKGROUND" description="JANT_THUMB_PANEL_BACKGROUND_DESC"  />
+				<field type="jantcolorpicker" name="thumnail_normal_state_color" default="#ffffff" label="JANT_THUMB_NORMAL_STATE_COLOR" description="JANT_THUMB_NORMAL_STATE_COLOR_DESC"  />
+				<field type="jantcolorpicker" name="thumnail_active_state_color" default="#ff6200" label="JANT_THUMB_ACTIVE_STATE_COLOR" description="JANT_THUMB_ACTIVE_STATE_COLOR_DESC"  />
+				<field name="thumb_width" type="text" default="60" label="JANT_THUMB_WIDTH" description="JANT_THUMB_WIDTH_DESC" />	
+				<field name="thumb_height" type="text" default="50" label="JANT_THUMB_HEIGHT" description="JANT_THUMB_HEIGHT_DESC" />	
+				<field name="thumb_border" type="text" default="2" label="JANT_THUMB_BORDER" description="JANT_THUMB_BORDER_DESC" />	
+				<field name="@sp5" type="spacer" default="" label="=== TOOLBAR PANEL PARAMETERS ===" description="" />
+				<field name="show_image_navigation" type="radio" default="1" label="JANT_SHOW_IMAGE_NAVIGATION" description="JANT_SHOW_IMAGE_NAVIGATION_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="@sp6" type="spacer" default="" label="=== IMAGE PANEL PARAMETERS ===" description="" />
+				<field name="img_presentation_mode" type="list" default="fit-in" label="JANT_PRESENTATION_MODE" description="JANT_PRESENTATION_MODE_DESC">
+					<option value="fit-in">JANT_FIT_IN</option>
+					<option value="expand-out">JANT_EXPAND_OUT</option>
+				</field>			
+				<field name="img_transition_type" type="list" default="slide" label="JANT_IMAGE_TRANSITION_TYPE" description="JANT_IMAGE_TRANSITION_TYPE_DESC">
+					<option value="fade">JANT_FADE</option>
+					<option value="slide">JANT_SLIDE</option>
+					<option value="pulse">JANT_PULSE</option>
+					<option value="fadeslide">JANT_FADESLIDE</option>
+				</field>
+				<field name="img_transition_time" type="text" default="400" label="JANT_TRANSITION_TIME" description="JANT_TRANSITION_TIME_DESC" />
+				<field type="jantcolorpicker" name="img_panel_background" default="#595959" label="JANT_IMAGE_PANEL_BACKGROUND" description="JANT_IMAGE_PANEL_BACKGROUND_DESC"  />	
+				
+			</fieldset>
+			<fieldset name="jant_about" label="JANT_ABOUT">
+				<field name="about" type="jantabout" description="" label="" />		
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

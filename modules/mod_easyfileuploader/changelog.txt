@@ -1,0 +1,43 @@
+CHANGELOG: Easy File Uploader
+
+Copyright: Michael A. Gilkes
+License: GNU/GPL v2
+
+
+Version 1.1 (J15+J16+J17)
+======================
+ > 2011-10-03 - Fixed bug related to replacing existing files
+ 
+ 
+Version 1.0 (J15+J16+J17)
+======================
+ > 2011-09-13 - Tested for Joomla 1.7
+ > 2011-09-13 - Added Option to save under username folders
+ > 2011-09-13 - Added Element to Detect MIME Testing Compatibility
+ > 2011-09-13 - Updated MIME detection order and fixed minor bug
+ > 2011-09-13 - Added Element for Custom Colors
+
+
+Version 0.8 (J15+J16)
+======================
+ > 2011-02-05 - Fixed syntax error in helper file
+ > 2011-02-06 - Adjusted mime detection function to ignore charset value
+ > 2011-02-20 - Added Joomla 1.6 Compatible branch. Removed Module Class Suffix Parameter.
+
+
+Version 0.6
+======================
+ > 2011-01-10 - Fixed MIME type tamper vulnerability
+
+
+Version 0.5
+======================
+ > 2010-03-24 - Added Back-end ability to provide a replace existing file option in the front-end
+ > 2010-03-24 - Added Back-end ability to provide custom text for asking to replace file
+ > 2010-03-24 - Added Back-end ability to provide a custom variable name for the file input field
+ > 2010-03-24 - Added Back-end ability to specify up to 10 multiple file uploads in the front-end
+
+
+Version 0.1
+======================
+ > 2010-03-21 - Module creation completed and module tested.

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<extension type="file" version="1.7" method="upgrade">
+	<name>Pacote de Idiomas em Português Brasileiro para TinyMCE</name>
+	<packagename>pt-BR</packagename>
+	<version>1.7.1</version>
+	<url>http://joomlacode.org/gf/project/portuguesebr/</url>
+	<packager>FaBMak</packager>
+	<packagerUrl>http://joomlacode.org/gf/project/portuguesebr/</packagerUrl>
+    <description><![CDATA[
+                 Arquivos de Idioma em Português Brasileiro do TinyMCE para Joomla! 1.7<br/>
+				 Copyrights: 2005 - 2011 Joomla! Brasil.<br/>
+				 Todos os direitos reservados.<br/>
+				 <a href="http://joomlacode.org/gf/project/portuguesebr/" target="_blank">Joomla! Brasil</a> é o único detentor dos copyrights desta tradução.<br/>
+				 De acordo com termo de licenciamento de <a href="http://www.opensourcematters.org" target="_blank">OpenSourceMatters</a> e <a href="http://www.joomla.org" target="_blank">Joomla!</a> todos os arquivos de idioma devem ser licenciados sob a <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank"> licença GNU/GPL (v.2.0)</a>.<br />
+				 Esta tradução está licenciada sob esta licença. Se você encontrar algum erro de digitação, traduções incorretas ou se deseja sugerir melhorias, entre em contato com o <a href="mailto:traducao@joomleiros.com">coordenador</a> da tradução.<br/><br/>]]>
+	</description>
+
+	<!-- Fileset definition -->
+	<fileset>
+		<files target="media/editors">
+					<filename>tinymce/jscripts/tiny_mce/langs/pt.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/advhr/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/advimage/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/advlink/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/autosave/langs/pt.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/emotions/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/fullpage/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/media/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/paste/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/searchreplace/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/style/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/table/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/template/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/themes/advanced/langs/pt.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/themes/advanced/langs/pt_dlg.js</filename>
+					<filename>tinymce/jscripts/tiny_mce/themes/simple/langs/pt.js</filename>
+		</files>
+	</fileset>
+</extension>

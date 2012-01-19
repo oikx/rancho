@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Easy File Uploader</name>
+	<author>Michael Gilkes</author>
+	<creationDate>March 2010</creationDate>
+	<copyright>Copyright (C) 2010 Michael Albert Gilkes. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
+	<authorEmail>jaido7@yahoo.com</authorEmail>
+	<authorUrl>http://www.michaelgilkes.info</authorUrl>
+	<version>1.1 (J16)</version>
+	<description>This is a flexible file upload module. It allows the administrator to specify a destination folder, and allows the user to upload files to it. The administrator can also specify how many files that can be uploaded simultaneously, as well as the text in the front end. You can even have more then one module of its kind on the same page. See readme.txt for usage instructions.</description>
+	<files>
+		<filename module="mod_easyfileuploader">mod_easyfileuploader.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>readme.txt</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>changelog.txt</filename>
+		<filename>css/index.html</filename>
+		<filename>css/colorpicker.css</filename>
+		<filename>scripts/index.html</filename>
+		<filename>scripts/jquery-1.6.1.min.js</filename>
+		<filename>scripts/colorpicker.js</filename>
+		<filename>elements/index.html</filename>
+		<filename>elements/easycolorpicker.php</filename>
+		<filename>elements/easymimedetect.php</filename>
+		<filename>images/index.html</filename>
+		<filename>images/blank.gif</filename>
+		<filename>images/colorpicker_indic.gif</filename>
+		<filename>images/colorpicker_select.gif</filename>
+		<filename>images/custom_indic.gif</filename>
+		<filename>images/colorpicker_background.png</filename>
+		<filename>images/colorpicker_hex.png</filename>
+		<filename>images/colorpicker_hsb_b.png</filename>
+		<filename>images/colorpicker_hsb_h.png</filename>
+		<filename>images/colorpicker_hsb_s.png</filename>
+		<filename>images/colorpicker_overlay.png</filename>
+		<filename>images/colorpicker_rgb_b.png</filename>
+		<filename>images/colorpicker_rgb_g.png</filename>
+		<filename>images/colorpicker_rgb_r.png</filename>
+		<filename>images/colorpicker_submit.png</filename>
+		<filename>images/custom_background.png</filename>
+		<filename>images/custom_hex.png</filename>
+		<filename>images/custom_hsb_b.png</filename>
+		<filename>images/custom_hsb_h.png</filename>
+		<filename>images/custom_hsb_s.png</filename>
+		<filename>images/custom_rgb_b.png</filename>
+		<filename>images/custom_rgb_g.png</filename>
+		<filename>images/custom_rgb_r.png</filename>
+		<filename>images/custom_submit.png</filename>
+		<filename>images/select.png</filename>
+		<filename>images/select2.png</filename>
+		<filename>images/slider.png</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_easyfileuploader/elements">
+			<fieldset name="basic">
+				<field name="efu_label" type="text" default="Choose a file to upload:" label="Label Text" description="This is the text that labels the upload file form." />
+				<field name="efu_button" type="text" default="Upload File" label="Submit Button Text" description="This is the text that is on the button to upload the file." />
+				<field name="efu_folder" type="folderlist" default="stories" label="Choose the Upload Folder" directory="images" description="This is the folder where the uploaded files are stored." hide_none="true" hide_default="true" />
+				<field name="efu_maxsize" type="text" default="1000000" label="Maximum File Size (bytes)" description="This is the maximum allowable file size, in bytes, that can be uploaded." />
+				<field name="results_bgcolor" type="easycolorpicker" default="#DDEEFF" label="Results Box Background Color" description="The background color of the Results information box." />
+				<field name="efu_spacer_details" type="spacer" label="&lt;b&gt;Details&lt;/b&gt;" />
+				<field name="efu_filetypes" type="textarea" default="image/gif;image/jpeg;image/pjpeg;image/png;application/pdf;application/msword;application/zip;application/x-compressed;application/x-zip-compressed;multipart/x-zip;application/excel;application/vnd.ms-excel;application/x-excel;application/x-msexcel" label="Permitted file types (separate by semi-colon)." description="This is a list of the file types that are permitted to be uploaded (separated by semi-colon). Type asterisk (*) to allow any type." rows="10" cols="40" />
+				<field name="efu_question" type="text" default="Replace existing files with uploaded files?" label="Replace Files Question" description="This is the text that labels the option of whether the user wants to replace existing files." />
+				<field name="efu_yes" type="text" default="Yes" label="Yes answer text" description="You are free to customize the YES answer text to the replace question." />
+				<field name="efu_no" type="text" default="No" label="No answer text" description="You care free to customize the NO answer text to the replace question." />
+				<field name="efu_replace" type="list" default="1" label="Include option to replace existing file?" description="This allows the administrator to decide whether to include an option in the front-end to replace en existing file with the same file name as the file to be uploaded.">
+					<option value="0">Yes</option>
+					<option value="1">No</option>
+				</field>
+				<field name="efu_spacer_format" type="spacer" label="&lt;b&gt;Uploader Format&lt;/b&gt;" />
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="efu_variable" type="text" default="fileToUpload" label="Input File Variable Name" description="This allows you to specify the variable name of the input file. Only change this if you intend to have more than one Easy File Uploader module on a single article page. In that case, each module should have its own unique name." />
+				<field name="efu_multiple" type="list" default="1" label="Number of Files to Upload" description="Select the number of upload file fields to include. The default is to upload 1 file, but you may select up to 10 files to upload simultaneously.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="efu_spacer_advanced" type="spacer" label="&lt;b&gt;Advanced&lt;/b&gt;" />
+				<field name="efu_user" type="list" default="0" label="Upload to Username subfolders" description="Setting this to YES will upload files to a subfolder in the Upload folder with the user's username.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="efu_mimedetect" type="easymimedetect" label="" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

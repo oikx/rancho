@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Easy Folder Listing</name>
+	<author>Michael Gilkes</author>
+	<creationDate>April 2010</creationDate>
+	<copyright>Copyright (C) 2010 Michael Albert Gilkes. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
+	<authorEmail>jaido7@yahoo.com</authorEmail>
+	<authorUrl>http://www.michaelgilkes.info</authorUrl>
+	<version>1.1 (J16)</version>
+	<description>This is a simple-to-use module that is used to list the contents 
+	of a folder in either a table or a list. The folder listing can display the 
+	filename, with or without the extension, with or without the date modified 
+	and file size, as well as a icon representing the file type. It has the 
+	feature of allowing the user to specify whether the filename listed should be 
+	linked or not.</description>
+	<files>
+		<filename module="mod_easyfolderlisting">mod_easyfolderlisting.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>readme.txt</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+		<folder>icons</folder>
+		<filename>changelog.txt</filename>
+		<filename>css/index.html</filename>
+		<filename>css/colorpicker.css</filename>
+		<filename>scripts/index.html</filename>
+		<filename>scripts/jquery-1.6.1.min.js</filename>
+		<filename>scripts/colorpicker.js</filename>
+		<filename>elements/index.html</filename>
+		<filename>elements/easycolorpicker.php</filename>
+		<filename>images/index.html</filename>
+		<filename>images/blank.gif</filename>
+		<filename>images/colorpicker_indic.gif</filename>
+		<filename>images/colorpicker_select.gif</filename>
+		<filename>images/custom_indic.gif</filename>
+		<filename>images/colorpicker_background.png</filename>
+		<filename>images/colorpicker_hex.png</filename>
+		<filename>images/colorpicker_hsb_b.png</filename>
+		<filename>images/colorpicker_hsb_h.png</filename>
+		<filename>images/colorpicker_hsb_s.png</filename>
+		<filename>images/colorpicker_overlay.png</filename>
+		<filename>images/colorpicker_rgb_b.png</filename>
+		<filename>images/colorpicker_rgb_g.png</filename>
+		<filename>images/colorpicker_rgb_r.png</filename>
+		<filename>images/colorpicker_submit.png</filename>
+		<filename>images/custom_background.png</filename>
+		<filename>images/custom_hex.png</filename>
+		<filename>images/custom_hsb_b.png</filename>
+		<filename>images/custom_hsb_h.png</filename>
+		<filename>images/custom_hsb_s.png</filename>
+		<filename>images/custom_rgb_b.png</filename>
+		<filename>images/custom_rgb_g.png</filename>
+		<filename>images/custom_rgb_r.png</filename>
+		<filename>images/custom_submit.png</filename>
+		<filename>images/select.png</filename>
+		<filename>images/select2.png</filename>
+		<filename>images/slider.png</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_easyfolderlisting/elements">
+			<fieldset name="basic">
+			<field name="efl_parent" type="folderlist" default="images" label="Choose the Parent Folder" directory="" description="This is the parent folder where the files are stored." hide_none="true" hide_default="true" />
+			<field name="efl_folder" type="text" default="" label="Location within the Parent Folder" description="This is the actual folder, within the parent folder (above), where the files are kept. Leave blank to show the contents of the parent folder." />
+			<field name="eflpro_spacer_custom" type="spacer" label="&lt;b&gt;Custom Settings&lt;/b&gt;" />
+			<field name="efl_icons" type="list" default="yes" label="Show Icons" description="If this option is set to Yes, each file will have an icon to describe the type of the file.">
+				<option value="yes">Yes</option>
+				<option value="no">No</option>
+			</field>
+			<field name="efl_extensions" type="list" default="no" label="Show File Extensions" description="If this option is set to No, each file name will be displayed without the file extension.">
+				<option value="yes">Yes</option>
+				<option value="no">No</option>
+			</field>
+			<field name="efl_size" type="list" default="yes" label="Show File Size" description="If this option is set to Yes, the size of the file will  be shown.">
+				<option value="yes">Yes</option>
+				<option value="no">No</option>
+			</field>
+			<field name="efl_date" type="list" default="yes" label="Show Date" description="If this option is set to Yes, the date that each file was modified will be shown.">
+				<option value="yes">Yes</option>
+				<option value="no">No</option>
+			</field>
+			<field name="efl_time" type="list" default="yes" label="Show Time (with the Date above)" description="If this option is set to Yes, the time stamp that each file was modified will be shown. If it is set to No, then only the Date will be shown. Note that if Date (above) is not shown at all, then time will not show either.">
+				<option value="yes">Yes</option>
+				<option value="no">No</option>
+			</field>
+			<field name="efl_linktofiles" type="list" default="yes" label="Link To Files" description="If this option is set to Yes, each file will be hyperlinked for easy downloading.">
+				<option value="yes">Yes</option>
+				<option value="no">No</option>
+			</field>
+			<field name="efl_forbidden" type="textarea" default="htm;html;php" label="Forbidden file types (separate by semi-colon)." description="This is a list of the file types that are forbidden to be listed (separated by semi-colon)." rows="10" cols="40" />
+			<field name="eflpro_spacer_visual" type="spacer" label="&lt;b&gt;Visual Formatting&lt;/b&gt;" />
+			<field name="efl_method" type="list" default="table" label="Display Method" description="If Table is selected, the folder listing will be displayed in an HTML TABLE. If List is selected, it will be displayed using the Unordered List element.">
+				<option value="table">Table</option>
+				<option value="list">List</option>
+			</field>
+			<field name="efl_sortcolumn" type="list" default="name" label="Sort Column" description="This specifies the column that the list is sorted by." >
+				<option value="name">Name</option>
+				<option value="size">Size</option>
+				<option value="date">Date</option>
+			</field>
+			<field name="efl_sortdirection" type="list" default="asc" label="Sort Direction" description="This specifies whether we are sorting by ascending or descending order." >
+				<option value="asc">Ascending</option>
+				<option value="desc">Descending</option>
+			</field>
+			<field name="efl_oddcolor" type="easycolorpicker" default="#F0F0F6" label="Odd Table Row Background Color" description="The background color of the odd table row. The default value is #F0F0F6." />
+			<field name="efl_evencolor" type="easycolorpicker" default="#FFFFFF" label="Even Table Row Background Color" description="The background color of the even table row. The default value is #FFFFFF." />
+			<field name="efl_headcolor" type="easycolorpicker" default="#E6EEEE" label="Heading Row Background Color" description="The background color of the heading row. The default value is #E6EEEE." />
+			<field name="efl_bordercolor" type="easycolorpicker" default="#CDCDCD" label="Border Color" description="The color of the table's border. The default value is #CDCDCD." />
+			<field name="eflpro_spacer_css" type="spacer" label="&lt;b&gt;Class Filtering&lt;/b&gt;" />
+			<field name="moduleclass_sfx" type="text" label="Module Class Suffix" description="Module Class Suffix" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="package" version="1.7">
+	<name>Pacote de Idiomas em Português Brasileiro</name>
+	<packagename>pt-BR</packagename>
+	<version>1.7.2</version>
+	<url>http://joomlacode.org/gf/project/portuguesebr/</url>
+	<packager>FaBMak</packager>
+	<packagerUrl>http://joomlacode.org/gf/project/portuguesebr/</packagerUrl>
+    <description><![CDATA[Arquivos de Idioma em Português Brasileiro para Joomla! 1.7<br/>
+				 Copyrights: 2005 - 2011 Joomla! Brasil.<br/>
+				 Todos os direitos reservados.<br/>
+				 <a href="http://joomlacode.org/gf/project/portuguesebr/" target="_blank">Joomla! Brasil</a> é o único detentor dos copyrights desta tradução.<br/>
+				 De acordo com termo de licenciamento de <a href="http://www.opensourcematters.org" target="_blank">OpenSourceMatters</a> e <a href="http://www.joomla.org" target="_blank">Joomla!</a> todos os arquivos de idioma devem ser licenciados sob a <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank"> licença GNU/GPL (v.2.0)</a>.<br />
+				 Esta tradução está licenciada sob esta licença. Se você encontrar algum erro de digitação, traduções incorretas ou se deseja sugerir melhorias, entre em contato com o <a href="mailto:traducao@joomleiros.com">coordenador</a> da tradução.<br/><br/>]]>
+	</description>
+
+	<files>
+		<file type="language" client="site" id="pt-BR">site_pt-BR.tar.gz</file>
+		<file type="language" client="admin" id="pt-BR">admin_pt-BR.tar.gz</file>
+		<file type="file">tinymce_lang_pack_pt_3.4.3.2_1.7v1.tar.gz</file>
+	</files>
+</extension> 

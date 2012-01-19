@@ -1,0 +1,28 @@
+CHANGELOG: Easy Folder Listing
+
+Copyright: Michael A. Gilkes
+License: GNU/GPL v2
+
+
+Version 1.1 (J15+J16)
+======================
+ > 2011-09-13 - Fixed bug with Module Manager Color Picker
+
+
+Version 1.0 (J15+J16)
+======================
+ > 2011-09-12 - Added jQuery Color Picker to Module Manager Color Parameters
+ > 2011-09-12 - Changed parent folder to Joomla root
+ > 2011-09-12 - Made Module Class Suffix apply to enclosing DIV
+
+Version 0.3
+======================
+ > 2011-02-19 - Added Joomla 1.6 Compatible branch. Fixed icon bug with C files.
+
+Version 0.2
+======================
+ > 2010-04-20 - Fixed a bug with the path name slashes for images and links
+
+Version 0.1
+======================
+ > 2010-04-17 - Module creation completed and module tested.
